@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int our_toupper(int ch)
+{
+	if(ch >= 'a' && ch <= 'z')
+		ch = ch - ('a' - 'A');
+	return ch;
+}
+
+int main()
+{
+	int ch;
+	
+	while(EOF != (ch = getchar()))
+	{
+		putchar(our_toupper(ch));
+	}
+	return 0;
+}
